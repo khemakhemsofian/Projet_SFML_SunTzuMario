@@ -5,6 +5,8 @@
 #include <iostream>
 #include "Menu.h"
 #include "GameScene.h"
+#include "OptionsScene.h"
+#include "Main.h"
 
 using namespace sf;
 using namespace std;
@@ -16,6 +18,7 @@ int main() {
     // Menu _menu(_window.getSize().x,_window.getSize().y);
     GameScene* _gameScene;
     bool _inMenu = true;
+    bool _inOptions = false;
 
     // Chargement des ressources
     Texture _backgroundTexture;
@@ -52,7 +55,7 @@ int main() {
     Menu _menu(_window.getSize().x, _window.getSize().y);
 
     _gameScene = new GameScene(_window.getSize().x, _window.getSize().y);
-
+    _optionsScene = new OptionsScene(_window.getSize().x, _window.getSize().y);
     while (_window.isOpen()) {
 
         Event event;
@@ -85,7 +88,8 @@ int main() {
                         break;
                     case 2:
                         cout << "Options sélectionnées" << endl;
-
+                        _inMenu = false; 
+                        _inOptions = true; 
                         break;
                     case 3:
                         cout << "Quitter le jeu" << endl;
@@ -94,7 +98,10 @@ int main() {
                     }
                 }
             }
-            else
+            else if (_inOptions)
+            {
+                _optionsScene->handleEvents(event, _window);
+            }else 
             {
                 _gameScene->handleEvents(event, _window);
             }
