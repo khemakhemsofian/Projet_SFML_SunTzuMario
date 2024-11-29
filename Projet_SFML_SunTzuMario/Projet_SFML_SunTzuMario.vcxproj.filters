@@ -13,10 +13,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Assets">
+      <UniqueIdentifier>{bb384c9b-b140-4de5-852a-f023c16bb453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Assets\Audio">
+      <UniqueIdentifier>{46270e1c-90b3-4b41-aa8d-7ff6618562f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Assets\Font">
+      <UniqueIdentifier>{ef9dc7bc-4e80-4f48-876e-efda11e59c47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Assets\Image">
+      <UniqueIdentifier>{ea6b594b-e739-4064-92ac-e13d4bffc67d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Menu.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Downloads\Young_Sun_Tzu_cosplay_Mario.jpg">
+      <Filter>Fichiers sources\Assets\Image</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\..\Downloads\super_mario_64\Super_Mario_64_font.ttf">
+      <Filter>Fichiers sources\Assets\Font</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\..\..\Downloads\572__aarondbaron__ambienceforyou.wav">
+      <Filter>Fichiers sources\Assets\Audio</Filter>
+    </Media>
+    <Media Include="..\..\..\Downloads\UI-Click_Sound.wav">
+      <Filter>Fichiers sources\Assets\Audio</Filter>
+    </Media>
+    <Media Include="..\..\..\Downloads\sound_click.wav">
+      <Filter>Fichiers sources\Assets\Audio</Filter>
+    </Media>
   </ItemGroup>
 </Project>
