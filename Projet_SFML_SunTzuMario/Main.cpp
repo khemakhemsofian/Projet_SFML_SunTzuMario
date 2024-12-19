@@ -17,6 +17,7 @@ int main() {
     _window.setFramerateLimit(60);
     // Menu _menu(_window.getSize().x,_window.getSize().y);
     GameScene* _gameScene;
+    OptionsScene* _optionScene;
     bool _inMenu = true;
     bool _inOptions = false;
 
@@ -55,7 +56,7 @@ int main() {
     Menu _menu(_window.getSize().x, _window.getSize().y);
 
     _gameScene = new GameScene(_window.getSize().x, _window.getSize().y);
-    _optionsScene = new OptionsScene(_window.getSize().x, _window.getSize().y);
+    _optionScene = new OptionsScene(_window.getSize().x, _window.getSize().y);
     while (_window.isOpen()) {
 
         Event event;
@@ -100,7 +101,7 @@ int main() {
             }
             else if (_inOptions)
             {
-                _optionsScene->handleEvents(event, _window);
+                _optionScene->handleEvents(event, _window);
             }else 
             {
                 _gameScene->handleEvents(event, _window);
@@ -122,5 +123,6 @@ int main() {
         _window.display();
     }
     delete _gameScene;
+    delete _optionScene;
     return 0;
 }

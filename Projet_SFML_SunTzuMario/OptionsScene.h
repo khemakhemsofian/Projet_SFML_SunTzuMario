@@ -2,6 +2,8 @@
 #define OPTIONSCENE_H
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/System.hpp>
+#include <vector>
 #include <iostream>
 using namespace sf;
 using namespace std;
